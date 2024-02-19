@@ -1,0 +1,13 @@
+# Ignore output files
+*.out
+*.exe
+*.o
+
+# Ignore the .vscode directory
+.vscode/
+
+# Ignore the .git directory
+.git/
+
+# Ignore any directory named "output" (modify as needed)
+output/
