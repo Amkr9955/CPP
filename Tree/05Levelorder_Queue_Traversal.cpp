@@ -19,8 +19,9 @@ void levelOrderQueue(Node* root){
     }
     queue<Node*>q;
     q.push(root);
+    Node *temp;
     while(!q.empty()){
-      Node *temp=q.front();
+      temp=q.front();
       cout<<temp->data<<" ";
       
       if(temp->left!=NULL){
