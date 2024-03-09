@@ -30,3 +30,6 @@ int main(){
     iphone.receiveCall();
     return 0;
 }
+
+//static data memebrs are allocated memory in class and it is share by all
+//the objects. it can be called without creating object
