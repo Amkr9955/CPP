@@ -27,3 +27,4 @@ int main()
 // This function is called when the ++ operator operates on the object of the overload class (object i in this case).
 //  In the program, void operator ++ () operator function is defined (inside overload class). 
 //  This function increments the value of count by 1 for i object.
+// important:functional overloading does not work in inheritance but it works in JAVA
