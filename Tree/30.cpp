@@ -1,0 +1,94 @@
+// Maximum width of a Binary Tree
+// TC:O(N*N)
+// SC:O(1)
+
+// C++ program to calculate width of binary tree
+#include <bits/stdc++.h>
+using namespace std;
+
+/* A binary tree node has data, pointer to left child
+and a pointer to right child */
+class node {
+public:
+	int data;
+	node* left;
+	node* right;
+	node (int d){
+	this->data = d;
+	this->left = this->right = NULL;
+	}
+};
+
+/*Function prototypes*/
+int getWidth(node* root, int level);
+int height(node* node);
+
+int getMaxWidth(node* root){
+ 
+    
+    int maxWidth = 0;
+    int width;
+    int h = height(root);
+    int i;
+    for (i = 1; i <= h; i++) {
+        width = getWidth(root, i);
+        if (width > maxWidth)
+            maxWidth = width;
+    }
+ 
+    return maxWidth;
+
+}
+int getWidth(node* root,int level){
+    if(root==NULL){
+        return 0;
+    }
+    if(level==1){
+        return 1;
+    }
+    if(level>1){
+        return getWidth(root->left,level-1)+
+        getWidth(root->right,level-1);
+    }
+}
+int height(node* root){
+    if(root==NULL){
+        return 0;
+    }
+    int left=height(root->left);
+    int right=height(root->right);
+
+    return left>right?(left+1):(right+1);
+}
+
+
+/* Driver code*/
+int main()
+{
+	node* root = new node(1);
+	root->left = new node(2);
+	root->right = new node(3);
+	root->left->left = new node(4);
+	root->left->right = new node(5);
+	root->right->right = new node(8);
+	root->right->right->left = new node(6);
+	root->right->right->right = new node(7);
+
+	/*
+	Constructed binary tree is:
+			1
+			/ \
+		2 3
+		/ \ \
+		4 5 8
+				/ \
+			6 7
+	*/
+
+	// Function call
+	cout << "Maximum width is " << getMaxWidth(root)
+		<< endl;
+	return 0;
+}
+
+// This code is contributed by rathbhupendra
