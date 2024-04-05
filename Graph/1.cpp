@@ -63,3 +63,62 @@ int main(){
 // i.e., v is the neighbor of u, but vice versa is not true. 
 // The space needed to represent a directed graph using its adjacency list is E locations, 
 // where E denotes the number of edges, as here each edge data appears only once.
+// Space complexity = O(E)
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n,e;                       //nodes  //edges
+    cin>>n>>e;
+    vecor<int>adj(n+1);
+    for(int i=0;i<e;i++){
+       int u,v;
+       adj[u].push_back(v);
+    }
+    return 0;
+}
+
+
+// Weighted Graph Representation
+
+// As of now, we were considering graphs with unit weight edges (i.e., 
+// if there is an edge between two nodes then the weight on the edge is unit weight ), 
+// now what if there are weights on its edges as shown in the following
+
+using namespace std;
+
+int main()
+{
+    int n, m;
+    cin >> n >> m;
+    // adjacency matrix for undirected graph
+    // time complexity: O(n)
+    int adj[n+1][n+1];
+    for(int i = 0; i < m; i++)
+    {
+        int u, v,wt;
+        cin >> u >> v>>wt;
+        adj[u][v] = wt;
+        adj[v][u] = wt  // this statement will be removed in case of directed graph
+    }
+    return 0;
+}
+
+// Earlier in the adjacency list, we were storing a list of integers in each index, 
+// but for weighted graphs, we will store pairs (node, edge weight) in it.
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n,e;                       //nodes  //edges
+    cin>>n>>e;
+    vector< pair <int,int> > adjList[n+1];
+    for(int i=0;i<e;i++){
+       int u,v,wt;
+       adj[u].push_back({v,wt});
+    }
+    return 0;
+}

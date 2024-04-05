@@ -8,6 +8,8 @@
 
 // No two nodes in the tree have the same data value.
 // It is assured that the node V is present and a path always exists.
+// https://takeuforward.org/data-structure/lowest-common-ancestor-for-two-given-nodes/
+
 
 #include <bits/stdc++.h>
 
@@ -38,11 +40,11 @@ int left=lowestCommonAncestor(root->left,x,y);
 int right=lowestCommonAncestor(root->right,x,y);
 
 if(left==-1){
-return right;
+return right->data;
 
 }
 else if(right==-1){
-    return left;
+    return left->data;
 }
 else{
     return root->data;

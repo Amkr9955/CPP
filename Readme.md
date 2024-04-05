@@ -44,17 +44,3 @@
 42.[Smart Pointers](/Core_concepts/smart_ponter.cpp)<br>
 
 
-**II.[Tree](/Tree/)**
----
-1.[Recursive Traversal](/Tree/1.cpp)<br>
-2.[Inorder Stack Traversal](/Tree/2.cpp)<br>
-3.[Inorder Morris Traversal](/Tree/3.cpp)<br>
-4.[LevelOrder Naive Traversal](/Tree/4.cpp)<br>
-5.[LevelOrder Queue Traversal](/Tree/5.cpp)<br>
-6.[Insertion](/Tree/6.cpp)<br>
-7.[Deletion](/Tree/7.cpp)<br>
-8.[Enumeration](/Tree/8.cpp)<br>
-9.[All possible Tree](/Tree/9.cpp)<br>
-10.[Preorder Iterative Traversal](/Tree/10.cpp)<br>
-11.[PostOrder 2 Stack Traversal](/Tree/11.cpp)<br>
-
